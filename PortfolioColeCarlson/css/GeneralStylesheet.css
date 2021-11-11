@@ -1,0 +1,88 @@
+/*Cole Carlson stylesheet general*/
+@font-face{
+    font-family: 'fira sans';
+    src: url(../font/firasans-bold-webfont.woff) format('woff'),
+         url(../font/firasans-bold-webfont.woff2) format('woff2')
+}
+
+.google{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: rgb(238,147,143);
+    background: radial-gradient(circle, rgba(238,147,143,1) 0%, rgba(215,57,26,1) 35%, rgba(196,69,0,1) 100%);
+}
+header{
+    font-family: 'fira sans';
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+#home{
+    padding-right: 30px;
+}
+
+#exHeader{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 40px;
+}
+
+#exHeader{
+    padding-right: 25px;
+}
+
+
+h2{
+    font-family: 'Qahiri', sans-serif;
+}
+
+#experience{
+    padding-right: 18px;
+}
+
+#gifSize{
+    overflow: auto;
+    width: 160px;
+    height: 180px;
+    padding: 20px;
+    border: 4px solid white;
+}
+
+article{
+    text-align: center;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 40px;
+    font-size: 25px;
+    
+}
+
+
+.form{
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-left: 60px;
+}
+
+table{
+    font-size: 40px;
+    border: 5px solid black;
+    margin:auto;
+}
+
+th{
+    color: white;
+}
+
+
+.foot{
+    text-align: center;
+    margin: 60px;
+    border: 10px dashed grey;
+}

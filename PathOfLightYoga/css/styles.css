@@ -1,0 +1,73 @@
+/*Cole Carlson, 11/19/2021*/
+
+ul{
+    list-style-image: url(../image/yogabullet.png);
+    margin-left: 3em;
+}
+
+nav > ul {
+	list-style: none;
+	padding:0;
+	margin:0;
+}
+
+nav > ul > li{
+	display:inline;
+}
+
+.schedule{
+    border-collapse: collapse;
+    border: solid black 1px;
+    width: 100%;
+    margin-bottom: .5em;
+    text-align: center;
+    
+}
+tr td{
+    border: solid black 1px;
+
+}
+
+thead{
+    border: solid black 1px;
+}
+
+address{
+    padding: .5em;
+}
+
+footer{
+    padding: .5em;
+}
+
+/*Mobile*/
+@media(max-width: 641px){
+    body{
+        background-image: url(../image/yogamobile.png);
+    }
+    nav ul li {
+		display: block;
+		list-style-type: disc;
+	}
+	header{
+        background-image: none;
+    }
+	img{
+		display: none;
+	}
+}
+/*Tablet*/
+@media(min-width: 641px) and (max-width:768px) {
+    body{
+        background-color: #F5F5F5;
+    }
+	nav ul li {
+		display: inline;
+		list-style-type: none;
+	}
+	img{
+		width: 50%;
+		height: 50%;
+		object-fit: contain;
+	}
+}

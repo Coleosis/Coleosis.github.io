@@ -1,0 +1,147 @@
+
+/* ------------- Global Styling ------------- */
+body {
+	margin: 0;
+	background: white;
+	font-weight: 300;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+img {
+	width: 720px;
+	height: 400px;
+}
+
+h1, h2, h3, h4 {
+	color:rgb(7, 184, 30);
+
+}
+
+p {
+	font-family: 'Nanum Gothic', sans-serif;
+	color: black;
+}
+
+.goCenter {					
+	text-align: center;
+}
+
+.goLeft {
+	float: left;
+}
+
+.leftMrgn {
+	margin-left: 50px;
+}
+
+.goRight {
+	float: right;
+}
+
+.rightMrgn {
+	margin-right: 50 px;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+
+
+/* -------Navbar styling------- */
+header {
+	background: black;
+}
+
+header::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.logo {
+	float: left;
+	max-width: 60px;
+	max-height: 60px;
+}
+
+nav {
+	float: left;
+}
+
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 200px;
+	padding-top: 2em;
+}
+
+nav a {
+	color:rgb(7, 184, 30);
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: large;
+}
+
+nav a:hover {
+	color: white;
+}
+
+/* ---------------- Home page Carousel styling ----------*/
+#slider {
+	width: 720px;
+	height: 400px;
+	overflow: hidden;
+}
+
+#slider .slides {
+	display: block;
+	width: 6000px;
+	height: 400px;
+	margin: 0;
+	padding: 0;
+}
+
+#slider .slide {
+	float: left;
+	list-style-type: none;
+	width: 720px;
+	height: 400px;
+}
+
+/* ----------- Footer Styling ------------- */
+footer {
+	background: black;
+}
+
+footer::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+footer label{
+	color: white;
+}
+
+footer a{
+	text-decoration: none;
+}
+
+footer h2{
+	color: rgb(7, 184, 30);
+}
+
+footer p{
+	color: white;
+}
+

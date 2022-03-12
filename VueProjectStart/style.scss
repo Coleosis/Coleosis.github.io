@@ -1,0 +1,105 @@
+button {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    color: #333;
+    background-color:#fff;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: '微软雅黑',arail;
+    cursor: pointer;
+    &[disabled]{
+      cursor: not-allowed;
+    }
+    &.danger {
+      background-color: #ff4949;
+      color: #fff;
+    }
+    &.success {
+      background-color: #13ce66;
+      color: #fff;
+    }
+    &.info {
+      background-color: #50bfff;
+      color: #fff;
+    }
+  }
+
+  @import url('https://fonts.googleapis.com/css?family=Mogra|Roboto');
+  body {
+    background: STEELBLUE;
+    font-family: 'Roboto';
+  }
+  
+  h1 {
+    color: #f9f9f9;
+    text-align: center;
+    font-size: 36px;
+    line-height: 1;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: "Mogra";
+    margin-bottom: 0;
+    text-shadow: 3px 4px 0px rgba(0,0,0,0.3);
+  }
+  
+  .aselect {
+          width: 280px;
+      margin: 20px auto;
+          .selector {
+              border: 1px solid gainsboro;
+              background: #F8F8F8;
+              position: relative;
+              z-index: 1;
+              .arrow {
+                  position: absolute;
+                  right: 10px;
+                  top: 40%;
+                  width: 0;
+                  height: 0;
+                  border-left: 7px solid transparent;
+                  border-right: 7px solid transparent;
+                  border-top: 10px solid #888;
+                  transform: rotateZ(0deg) translateY(0px);
+                  transition-duration: 0.3s;
+                  transition-timing-function: cubic-bezier(.59,1.39,.37,1.01);
+              }
+              .expanded {
+                  transform: rotateZ(180deg) translateY(2px);
+              }
+              .label {
+                  display: block;
+                  padding: 12px;
+                  font-size: 16px;
+                  color: #888;
+              }
+          }
+          ul {
+              width: 100%;
+              list-style-type: none;
+        padding: 0;
+        margin: 0;
+              font-size: 16px;
+              border: 1px solid gainsboro;
+              position: absolute;
+              z-index: 1;
+        background: #fff;
+          }
+          li {
+              padding: 12px;
+              color: #666;
+              &:hover {
+                  color: white;
+                  background: seagreen;
+              }
+          }
+          .current {
+              background: #eaeaea;
+          }
+          .hidden {
+              visibility: hidden;
+          }
+          .visible {
+              visibility: visible;
+          }
+      }

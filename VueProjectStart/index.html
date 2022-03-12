@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Project 3</title>
+
+  <link
+          type="text/css"
+          rel="stylesheet"
+          href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"
+        />
+        <link
+          type="text/css"
+          rel="stylesheet"
+          href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"
+        />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.scss" rel="stylesheet">
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+
+  
+
+  <style>
+    div.bordered>div {
+      border:2px solid blue;
+      height:100px;
+    }
+    div.bordered {
+      margin-top:20px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Example of Vue components</h1>
+        <p class="lead">Try them out below</p>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row bordered">
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+        <div id="app">
+          <my-button>normal</my-button>
+          <my-button type="danger" @click="toggleLable">{{label}}</my-button>
+          <my-button type="success">success</my-button>
+          <my-button type="info">info</my-button>
+          <my-button :disabled="true">disabled</my-button>
+          <button @click="callback">lalala</button>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-9 col-xl-3"></div>
+        <div id="app">	
+          <h1>Custom Select Dropdown</h1>
+        
+          <div class="aselect" :data-value="value" :data-list="list">
+              <div class="selector" @click="toggle()">
+                  <div class="label">
+                    <span>{{ value }}</span>
+                  </div>
+              <div class="arrow" :class="{ expanded : visible }"></div>
+                  <div :class="{ hidden : !visible, visible }">
+                      <ul>
+                          <li :class="{ current : item === value }" v-for="item in list" @click="select(item)">{{ item }}</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+        </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-9 col-xl-3"></div>
+      <script src="https://unpkg.com/vue@next"></script>
+
+        <div id="dynamic-component-demo" class="demo">
+          <button
+            v-for="tab in tabs"
+            :key="tab"
+            :class="['tab-button', { active: currentTab === tab }]"
+            @click="currentTab = tab"
+          >
+            {{ tab.name }}
+          </button>
+        
+          <component
+            v-bind:is="currentTab.component"
+          ></component>
+        </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3"></div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+
+</body>
+
+</html>

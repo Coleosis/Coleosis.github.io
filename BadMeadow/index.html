@@ -1,0 +1,128 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" />
+    <title>Making your first Phaser 3 Game - Part 10</title>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+    
+</head>
+<body>
+
+<script type="text/javascript">
+
+var config = {
+    type: Phaser.AUTO,
+    width: 960,
+    height: 640,
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: { y: 0 },
+            debug: false
+        }
+    },
+    scene: {
+        preload: preload,
+        create: create,
+        update: update
+    }
+};
+
+var player;
+var beast;
+var cursors;
+var time = 0;
+var gameOver = false;
+var timeText;
+
+var game = new Phaser.Game(config);
+
+function preload ()
+{
+    this.load.image('map', 'assets/map.png');
+    
+   
+    this.load.image('eggy', 'assets/eggy.png', { frameWidth: 32, frameHeight: 48 });
+    this.load.image('beast', 'assets/beast.png', { frameWidth: 34, frameHeight: 44 });
+}
+
+function create ()
+{
+    
+    this.add.image(480, 320, 'map');
+
+    player = this.physics.add.sprite(490, 270, 'eggy');
+    beast = this.physics.add.sprite(60, 170, 'beast');
+
+    cursors = game.input.keyboard.createCursorKeys();
+
+
+
+    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+
+
+    this.physics.add.collider(player, beast, hitBeast, null, this);
+
+    timeText = this.add.text(16, 16, 'time: 0s', { fontSize: '32px', fill: '#000' });
+}
+
+function update ()
+{
+    if (cursors.left.isDown)
+    {
+        player.setVelocityX(-160);
+    }
+    if (cursors.up.isDown)
+    {
+        player.setVelocityY(160);
+    }
+    if (cursors.right.isDown)
+    {
+        player.setVelocityX(160);
+    }
+    if (cursors.down.isDown)
+    {
+        player.setVelocityY(-160);
+    }
+
+    function counttime (time)
+{
+    
+
+    time += 1;
+    scoreText.setText('Time:' + time + 's');
+}
+}
+
+function createBeast (beast)
+{
+    
+
+        var beast = beast.create(x, 16, 'beast');
+        
+        beast.setCollideWorldBounds(true);
+        beast.setVelocity(Phaser.Math.Between(80, 100), 20);
+}
+
+
+
+function hitBeast (player, beast)
+{
+    this.physics.pause();
+
+    player.setTint(0xff0000);
+
+    
+
+    gameOver = true;
+}
+
+</script>
+
+</body>
+</html>

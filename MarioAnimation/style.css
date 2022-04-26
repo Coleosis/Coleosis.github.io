@@ -85,7 +85,7 @@ html, body{
     transform: translateX(-200px)
   }
   to{
-    transform: translateX(2000px)
+    transform: translateX(4000px)
   }
 }
 

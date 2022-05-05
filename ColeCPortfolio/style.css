@@ -1,0 +1,150 @@
+/*Font names
+font-family: 'Shizuru', cursive;
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+font-family: 'Righteous', cursive;*/
+
+/* ---- Global Styling ---- */
+body,
+html {
+    min-height: 100%;
+
+}
+
+body {
+    background-image: url("images/background.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+@media (min-width: 576px) {
+    .container-sm, .container {
+      max-width: 540px;
+    }
+  }
+  @media (min-width: 768px) {
+    .container-md, .container-sm, .container {
+      max-width: 720px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container-lg, .container-md, .container-sm, .container {
+      max-width: 960px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+      max-width: 1140px;
+    }
+  }
+  @media (min-width: 1400px) {
+    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+      max-width: 1320px;
+    }
+  }
+
+/* ---- NavBar Styling ---- */
+nav {
+    height: 80px;
+    background: rgb(28,20,39);
+}
+
+nav ul{
+    line-height: 80px;
+}
+
+nav ul li{
+    display: inline-block;
+ 
+}
+
+nav ul li a{
+    font-family: 'Righteous', cursive;
+    text-decoration: none;
+    position: relative;
+    color: rgb(126,202,156);
+    font-size: 30px;
+}
+
+nav a:hover {
+	color: rgb(204,255,189);
+}
+
+/* ---- Bio Page styling ---- */
+#bio {
+    margin-top: 200px;
+    text-align: center;
+    border-style: double;
+    border-radius: 10px;
+    background-color: rgb(64,57,74);
+    color: rgb(204,255,189);
+    font-size: 23px;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+#bio h1 {
+    font-family: 'Righteous', cursive;
+    color: rgb(126,202,156);
+    font-size: 60px;
+}
+
+#bio h3 {
+    font-family: 'Shizuru', cursive;
+    font-size: 30px;
+    color: rgb(126,202,156); 
+}
+
+/* ---- Projects page styling ---- */
+#proj {
+    margin-top: 200px;
+    border-style: double;
+    border-radius: 10px;
+    background-color: rgb(64,57,74);
+    color: rgb(204,255,189);
+    font-size: 23px;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+#proj h1 {
+    font-family: 'Righteous', cursive;
+    color: rgb(126,202,156);
+    font-size: 60px;
+    text-align: center;
+}
+
+#proj h3 {
+    font-family: 'Shizuru', cursive;
+    font-size: 30px;
+    color: rgb(126,202,156);
+    text-align: center; 
+}
+
+#proj ul {
+    list-style-type:square;  
+}
+
+#proj ul li a{
+    color: rgb(126,202,156); 
+}
+
+/* ---- Contact page ---- */
+.emailF {
+    margin-top: 200px;
+    text-align: center;
+    border-style: double;
+    border-radius: 10px;
+    background-color: rgb(64,57,74);
+    color: rgb(204,255,189);
+    font-size: 23px;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+.emailF h1 {
+    font-family: 'Righteous', cursive;
+    color: rgb(126,202,156);
+    font-size: 60px;
+}
+
+.emailF h3 {
+    font-family: 'Shizuru', cursive;
+    font-size: 30px;
+    color: rgb(126,202,156); 
+}
